@@ -1,0 +1,739 @@
+-----------------------------------------------------------------PRACTICAL 1----------------------------------------------------------------
+Q.1A)
+
+<!DOCTYPE html>
+<head>
+    <title>Practical no 1</title>
+</head>
+<body>
+    <script type="text/javascript" lang="javascript">
+        var x=prompt("Enter number :");
+    function Reverse(x)
+    {
+        var n=x;
+        var r=0;
+            while(x>0)
+            {
+                r=r*10+x%10;
+                x=Math.trunc(x/10);
+            }
+        document.write("Reverse of "+n+" is :"+r);
+    }
+    Reverse(x);
+    </script>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 1</title>
+</head>
+<body>
+    <script type="text/javascript" lang="javascript">
+        var x=prompt("Enter terms :");
+        document.write("Fabonacci sequence till "+x+" is :<br>");
+    function fab(x)
+    {
+        var a=0;
+        var b=1;
+        document.write(a+"<br>")
+        document.write(b+"<br>")
+        for(var i=1;i<x;i++)
+        {
+        var c=a+b;
+            a=b;
+            b=c;
+            document.write(b+"<br>");
+        }
+    }
+    fab(x);
+    </script>
+</body>
+</html>
+
+Q.1C)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 1</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var x=prompt("Enter number :");
+        document.write("Factorial of "+x+" is :<br>");
+        function fac(x)
+        {
+            if(x==1 || x==0)
+            {
+                document.write(1);
+            }
+            else
+            {
+                var f=1;
+                for(var i=1;i<=x;i++)
+                {
+                    f=f*i;
+                    document.write(f +"<br>");
+                }
+            }
+        }
+        fac(x);
+    </script>
+</body>
+</html>
+
+Q.2A)
+
+<html>
+ <head> 
+   <title>practical-1</title>
+ </head>
+ <body>
+  <form name="from1" onsubmit="num()">
+   <label>Enter number:</label>
+   <input type="text" name="num1" required/>
+   <input type="submit" value="Submit"/>
+  </form>
+ <script>
+  function num()
+  {
+   var x=document.from1.num1.value;
+   if(isNaN(x))
+   { 
+    alert("Please enter valid no.");
+   }
+  }
+ </script>
+</body>
+</html>
+
+Q.2B)
+
+<html>
+ <head>
+  <title>practical-1</title>
+ </head>
+ <body>
+  <form name="from1" onsubmit="pwd()">
+  <label>Enter password:</label>
+  <input type="text" name="num1" required/><br>
+  <label>Retype password:</label>
+  <input type="text" name="num2" required/><br>
+  <input type="submit" value="Submit"/>
+  </form>
+  <script>
+  function pwd()
+  {
+   var p=document.from1.num1.value;
+   var n=document.from1.num2.value;
+   if(p!=n)
+   {
+    alert("Please enter valid password")
+   }
+  }
+ </script> 
+ </body>
+</html>
+
+Q.2C)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 1</title>
+</head>
+<body>
+    <input type="tel" maxlength="10"/>
+    <input type="text" minlength="20"/>
+    <input type="text" required/>
+    <input type="email" required >
+    <input type="password" required max="16" min="8">
+</body>
+</html>
+
+
+-----------------------------------------------------------------PRACTICAL 2----------------------------------------------------------------
+
+Q.1A)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 2</title>
+</head>
+<body>
+    <h2>JS String Functions</h2>
+    <script>
+        var s="hello";
+        var c="world";
+        document.write(s.length +"<br>");
+        document.write(s.toLowerCase()+"<br>");
+        document.write(s.toUpperCase()+"<br>");
+        document.write(s.concat(c)+"<br>");
+        document.write(s.replace("ello","i")+"<br>")
+        document.write(s.endsWith("o"));
+    </script>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 2</title>
+</head>
+<body>
+    <p id="p1">JavaScript is easy to understand</p><br>
+    <button onclick="repl()">replace</button>
+    <button onclick="search()">Search</button>
+    <script>
+        function repl()
+        {
+            var x=document.getElementById("p1").innerText;
+            var r=x.replace("JavaScript","PYTHON");
+            document.getElementById("p1").innerHTML=r;
+        }
+        function search()
+        {
+            var x=document.getElementById("p1").innerText;
+            var n=x.search("JavaScript");
+            document.write("pos at :"+n+"<br>");
+        }
+    </script>
+</body>
+</html>
+
+Q.1C)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 2</title>
+</head>
+<body>
+    <h2>JS Math Functions</h2>
+    <script>
+        document.write("Absolute (-3.5) is "+Math.abs(-3.5)+"<br>");
+        document.write("Square (10) is "+ Math.pow(10,2) +"<br>");
+        document.write("Square root(25) is "+ Math.sqrt(25)+"<br>");
+        document.write("Floor value(6.5) is "+ Math.floor(6.5)+"<br>");
+        document.write("Ceil value (6.5) is "+ Math.ceil(6.5)+"<br>");       
+    </script>
+</body>
+</html>
+
+Q.1D)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 2</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <script>
+        var d=new Date();
+        document.getElementById("p1").innerHTML="Today's Date :"+d.getDate()+"<br>";
+        document.getElementById("p2").innerHTML="Today's Day :"+d.getDay()+"<br>";
+        document.getElementById("p3").innerHTML="Full-Year :"+d.getFullYear()+"<br>";
+        document.getElementById("p4").innerHTML="Month :"+d.getMonth()+"<br>";
+        document.getElementById("p5").innerHTML="Time :"+d.getTime()+"<br>";
+    </script>
+</body>
+</html>
+
+-----------------------------------------------------------------PRACTICAL 3----------------------------------------------------------------
+
+Q.1A)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no -3</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var d='{"id":101,"Name":"abc","title":"xyz","author":"pqr"}'
+        var j=JSON.parse(d)
+        document.write("Id :"+j.id+" , Name is :"+j.Name+" , Author is "+j.author+" , Title :"+j.title);
+    </script>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no -3</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var d=[{"id":101,"Name":"a","desg":"Software Dev","sal":50000},
+               {"id":102,"Name":"b","desg":"Manager","sal":80000},
+               {"id":103,"Name":"c","desg":"Software Designer","sal":40000},
+               {"id":104,"Name":"d","desg":"Software Dev","sal":50000}
+              ]
+        document.write(d[0].id +"<br>");
+        document.write(d[0].Name +"<br>");
+        document.write(d[0].desg +"<br>" );
+        document.write(d[0].sal +"<br>" );
+    </script>
+</body>
+</html>
+
+Q.1C)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-3</title>
+</head>
+<body>
+    <script>
+        var marks={"a":{"phy":80,"chem":90,"maths":95},
+                   "b":{"phy":75,"chem":95,"maths":85},
+                   "c":{"phy":85,"chem":89,"maths":95},
+                   "d":{"phy":82,"chem":60,"maths":75}
+                  }
+        document.write(marks.a.phy+"<br>");
+        document.write(marks.a.chem+"<br>");
+        document.write(marks.a.maths+"<br>");
+    </script>
+</body>
+</html>
+
+
+-----------------------------------------------------------------PRACTICAL 4----------------------------------------------------------------
+
+Q.1A)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<sports>
+    <Sname>FOOTBALL</Sname>
+    <team>Stoke-city</team>
+    <Tsize>22</Tsize>
+    <level>none</level>
+</sports>
+</xml>
+
+Q.1B)
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Trasfrom">
+<xsl:output method="text">
+<xsl:template match="sports">
+  <xsl:value-of select="Sname"/><br>
+  <xsl:value-of select="team"/><br>
+<sports>
+    <Sname>FOOTBALL</Sname>
+    <team>Stoke-city</team>
+    <Tsize>22</Tsize>
+    <level>none</level>
+</sports>
+
+-----------------------------------------------------------------PRACTICAL 5----------------------------------------------------------------
+
+Q.1A)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 5</title>
+    <script src="D:\Web Programming\Practical no-5\jquery-3.6.1.js"></script>
+</head>
+<body>
+    <centre>
+    <button id="btn1">Click</button><br>
+    <h3 id="h1">Double-click</h3><br>
+    <h3 id="h2">Mouse-Enter</h3><br>
+    <h3 id="h3">Mouse-Leave</h3><br>
+    </centre>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btn1").click(function()
+            {
+                alert("Clicked on Button");
+            });
+            $("#h1").dblclick(function()
+            {
+                alert("DoubleClicked on Header");
+            });
+            $("#h2").mouseenter(function()
+            {
+                alert("MouseEnter");
+            });
+            $("#h3").mouseleave(function()
+            {
+                alert("MouseLeave");
+            });
+        });
+    </script>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no 5</title>
+    <style>
+        #box
+        {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div><br>
+    <button id="Hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="fadein">Fade-IN</button>
+    <button id="fadeout">Fade-Out</button>
+    <button id="slideup">slide-up</button>
+    <button id="slided">slide-down</button>
+    <script src="D:\Web Programming\Practical no-5\jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $("#Hide").click(function()
+            {
+                $("#box").hide();
+            });
+            $("#show").click(function()
+            {
+                $("#box").show();
+            });
+            $("#fadein").click(function()
+            {
+                $("#box").fadeIn();
+            });
+            $("#fadeout").click(function()
+            {
+                $("#box").fadeOut();
+            });
+            $("#slideup").click(function()
+            {
+                $("#box").slideUp();
+            });
+            $("#slided").click(function()
+            {
+                $("#box").slideDown();
+            });
+        });
+    </script>
+</body>
+</html>
+
+Q.1C)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-5</title>
+    <script src="D:\Web Programming\Practical no-5\jquery-3.6.1.js"></script>
+    <style>
+        #box
+        {
+            position: relative;
+            width: 100px;
+            height: 80px;
+            background-color: rgb(5, 25, 25);
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div><br>
+    <button id="anime">Animate</button>
+    <script>
+        $(document).ready(function()
+        {
+            $("#anime").click(function()
+            {
+                $("#box").animate({left : '600px'});
+            });
+        });
+    </script>
+</body>
+</html>
+
+Q.1D)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-5</title>
+    <script src="D:\Web Programming\Practical no-5\jquery-3.6.1.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function()
+        {
+            $(document).keypress(function()
+            {
+                alert("Key-pressed");
+            })
+        })
+    </script>
+</body>
+</html>
+
+-----------------------------------------------------------------PRACTICAL 6----------------------------------------------------------------
+
+Q.1A)
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>With Ajax</h2>
+<div id="demo">
+<button type="button"onclick="loadXMLDoc()"> Change Content </button>
+</div>
+<script>
+function loadXMLDoc(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("demo").innerHTML = this.responseText;
+}
+}; 
+xhttp.open("GET", "text.txt", true);
+xhttp.send();
+}
+</script>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Without Ajax</h2>
+<div id="demo">
+<button type="button"onclick="loadXMLDoc()"> Change Content </button>
+</div>
+<script>
+function loadXMLDoc(){
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function(){
+if (this.readyState == 4 && this.status == 200) {
+document.getElementById("demo").innerHTML = this.responseText;
+}
+}; 
+xhttp.open("GET", "text.txt", false);
+xhttp.send();
+}
+</script>
+</body>
+</html>
+
+
+-----------------------------------------------------------------PRACTICAL 8----------------------------------------------------------------
+
+
+Q.1A)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-8</title>
+</head>
+<body>
+    <?php
+       echo abs(-9.55);
+       echo floor(9.5);
+       echo ceil(9.5);
+       echo max(10,4,2);
+       echo min(10,4,2);
+       echo pow(4,2);
+       echo sqrt(25);
+    ?>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-8</title>
+</head>
+<body>
+    <?php
+    $str="Hello";
+    $str1="World";
+    echo strlen(str);
+    echo strtolower(str);
+    echo strtoupper(str);
+    echo str_replace("ello","i",str);
+    echo strrev(str);
+    ?>
+</body>
+</html>
+
+-----------------------------------------------------------------PRACTICAL 9----------------------------------------------------------------
+
+Q.1A)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-9</title>
+</head>
+<body>
+<?php
+$num1=900;
+$num2=1000;
+for($k=$num1;$k<$num2+1;$k++)
+{
+$n=0;
+for($i=2;$i<$k;$i++)
+{
+    if($k%$i==0)
+    {
+        $n++;
+        break;
+    }
+}
+if($n==0){
+echo($k." ");
+}
+}
+?>
+</body>
+</html>
+
+Q.1B)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-9</title>
+</head>
+<body>
+<?php
+$num=1234;
+$rev=0;
+while($num>0)
+{
+    $rem=$num%10;
+    $rev=$rev*10+$rem;
+    $num=trunc($num/10);
+}
+echo($rev);
+?>
+</body>
+</html>
+
+Q.1C)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical no-9</title>
+</head>
+<body>
+<?php
+$num1=10;
+$num2=20;
+echo "Before swapping value of $num1 and $num2";
+$num1=$num1+$num2;
+$num2=$num1-$num2;
+$num1=$num1-$num2;
+echo "After swapping value of $num1 and $num2";
+?>
+</body>
+</html>
+
+Q.2A)
+
+<?php
+  $arr=array(1,2,3,4,5,6);
+  foreach($arr as $a)
+  {
+    echo($a ." ");
+  }
+?>
+
+Q.2B)
+
+<?php
+  $arr=array("one"=>1,"two"=>2,"three"=>3,"four"=>4,"five"=>5);
+  echo($arr['one']."<br>");
+  echo($arr['two']."<br>");
+  echo($arr['three']."<br>");
+?>
+
+Q.2C)
+
+<?php
+ $arr=(array(1,2,3,4,5),
+       array(6,7,8,9,10),
+       array(11,12,13,14,15)
+ )
+ echo($arr[0][0])  //o/p(1)
+ echo($arr[0][1])  //o/p(2)
+ echo($arr[0][2])  //3
+ ?>
+
+-----------------------------------------------------------------PRACTICAL 10----------------------------------------------------------------
+
+Q.1A)
+
+<?php
+    $f=fopen("text.txt",'r')
+    echo fread("$f");
+    fclose($f)
+
+    $fw=fopen("text.txt","w")
+    $txt="good morning";
+    fwrite($fw,$txt);
+    fclose($fw);
+?>
+
+Q.1B)
+
+<?php
+  $sname="Localhost";
+  $uname="root";
+  $pass="12345";
+  $db="Student";
+  $conn=Mysqli_Connect($sname,$uname,$pass,$db);
+  if(!$conn)
+  {
+    die("Connection Failed ",$conn->Connect_error);
+  }
+  echo"Connected";
+  if(isset($_POST['Submit']))
+  {
+    $fname=$_POST['fn'];
+    $lname=$_POST['ln'];
+    $marks=$_POST['mks'];
+    $sql="INSERT INTO student VALUES('$fname','$lname','$marks')";
+    if(Mysqli_query($conn,$sql))
+    {
+        echo"Record stored sucessfully";
+    }
+    else
+    {
+        echo"form not submitted";
+    }
+  }
+  ?>
+
+
+
